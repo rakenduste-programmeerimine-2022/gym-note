@@ -1,0 +1,19 @@
+{
+  "name": "gym-note",
+  "version": "1.0.0",
+  "description": "family guy funny moments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakenduste-programmeerimine-2022/gym-note.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakenduste-programmeerimine-2022/gym-note/issues"
+  },
+  "homepage": "https://github.com/rakenduste-programmeerimine-2022/gym-note#readme"
+}
