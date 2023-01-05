@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import * as React from "react";
 import NavigationHeader from "./components/NavigationHeader";
+import NewGymNote from "./pages/NewGymNote";
 
 const Theme = createTheme({
   background: {
@@ -16,6 +17,12 @@ const Theme = createTheme({
   overrides: {
 
   },
+  typography: {
+    fontFamily: [
+        'Wallpoet',
+        'Inter',
+    ].join()
+  },
 })
 
 function App() {
@@ -27,18 +34,7 @@ function App() {
     <NavigationHeader></NavigationHeader>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. also lmao xd
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NewGymNote/>
       </header>
     </div>
   </ThemeProvider>

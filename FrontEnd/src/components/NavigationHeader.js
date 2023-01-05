@@ -6,9 +6,11 @@ import { styled } from "@mui/material/styles";
 
 const StyledTab = styled(Tab)({
     color: "black",
+    fontSize: 20,
 
     "&.Mui-selected":{
         color: "gray",
+        indicatorColor: "red",
     }
 })
 export default function NavigationHeader() {
@@ -21,10 +23,12 @@ export default function NavigationHeader() {
     return (
         <>
             <Box sx={{ width: '100%'}}>
-                <Tabs value={value} onChange={handleChange} centered>
-                    <StyledTab label="Item One" />
-                    <StyledTab label="Item Two" />
-                    <StyledTab label="Item Three" />
+                <Tabs value={value} onChange={handleChange} indicatorColor="">
+                    <StyledTab label="New GymNote" />
+                    <StyledTab label="My GymNotes" />
+                    <StyledTab label="Explore" />
+                    <StyledTab label="Guides" />
+                    <StyledTab label="My Profile"/>
                 </Tabs>
             </Box>
         </>
