@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { styled } from "@mui/material/styles";
+import NewGymNote from "../pages/NewGymNote";
+import ProfilePage from "../pages/Profile";
 
 const StyledTab = styled(Tab)({
     color: "black",
@@ -24,7 +26,7 @@ export default function NavigationHeader() {
         <>
             <Box sx={{ width: '100%'}}>
                 <Tabs value={value} onChange={handleChange} indicatorColor="">
-                    <StyledTab label="New GymNote" />
+                    <StyledTab label="New GymNote"/>
                     <StyledTab label="My GymNotes" />
                     <StyledTab label="Explore" />
                     <StyledTab label="Guides" />

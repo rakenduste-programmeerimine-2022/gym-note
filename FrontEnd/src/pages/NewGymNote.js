@@ -18,7 +18,7 @@ import EditIcon from '@mui/icons-material/Edit';
 function ExerciseTable(props) {
     const { tableData, setTableData, editMode, setEditMode } = props;
     return (
-        <Box fontFamily={"Inter"}>
+        <Box fontFamily={"Roboto"}>
             <Table sx={{backgroundColor: "#929292" }}>
                 <TableHead>
                     <TableRow sx={{ backgroundColor: "gray" }}>
@@ -138,12 +138,12 @@ export default function NewGymNote() {
         <React.Fragment>
             <CssBaseline/>
             <Container fixed>
-                <Box sx={{bgcolor: '#9b9b9b', height: '100vh'}}>
+                <Box sx={{bgcolor: '#9b9b9b', height: '100vh'}} fontFamily={"Roboto"}>
                     <Box textAlign={"left"} lineHeight={3} paddingLeft={3} color={"black"} fontSize={30}>
                         TODAY'S GYMNOTE:</Box>
-                    <Box paddingX={10} paddingTop={5}>
-                        <Box fontFamily={"Inter"} paddingBottom={5}>
-                            <TextField sx={{backgroundColor: 'white'}} //TODO: fix the font, set to Inter
+                    <Box paddingX={10} paddingTop={5} fontFamily={"Roboto"}>
+                        <Box fontFamily={"Roboto"} paddingBottom={5}>
+                            <TextField sx={{backgroundColor: 'white'}}
                                        id="NoteDescription" label="Description" variant="outlined" fullWidth multiline> Why
                                 can I put random text here lol </TextField>
                         </Box>

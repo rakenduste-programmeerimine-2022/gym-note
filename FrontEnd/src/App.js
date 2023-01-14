@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import * as React from "react";
 import NavigationHeader from "./components/NavigationHeader";
 import NewGymNote from "./pages/NewGymNote";
+import ProfilePage from "./pages/Profile";
 
 const Theme = createTheme({
   background: {
@@ -34,7 +35,7 @@ function App() {
     <NavigationHeader></NavigationHeader>
     <div className="App">
       <header className="App-header">
-        <NewGymNote/>
+        <ProfilePage/>
       </header>
     </div>
   </ThemeProvider>
