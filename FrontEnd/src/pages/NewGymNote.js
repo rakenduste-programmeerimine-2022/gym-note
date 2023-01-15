@@ -14,6 +14,7 @@ import {
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import EditIcon from '@mui/icons-material/Edit';
+import SelectPrivacy from "../components/SelectPrivacy";
 
 function ExerciseTable(props) {
     const { tableData, setTableData, editMode, setEditMode } = props;
@@ -94,32 +95,6 @@ function handleAddRow(tableData, setTableData, editMode, setEditMode) {
     // Here it adds a new row
     setTableData([...tableData, newRow]);
 }
-
-function SelectPrivacy() {
-    const [privacy, setPrivacy] = React.useState('');
-
-    const handleChange = (event) => {
-        setPrivacy(event.target.value);
-    };
-
-    return (
-        <Box sx={{ width:"10vw" }}>
-            <FormControl variant={"filled"} fullWidth>
-                <InputLabel id="PrivacySelectLabel">Visibility</InputLabel> {/* TODO: Maybe add a default select? Seems kind of a hassle to do rn but if we have the time */}
-                <Select
-                    labelId="PrivacySelectLabel"
-                    id="PrivacySelect"
-                    value={privacy}
-                    label="Privacy"
-                    onChange={handleChange}
-                >
-                    <MenuItem value={false}>Public</MenuItem>
-                    <MenuItem value={true}>Private</MenuItem>
-                </Select>
-            </FormControl>
-        </Box>
-        )
-    }
 
 export default function NewGymNote() {
     const [editMode, setEditMode] = React.useState({});
