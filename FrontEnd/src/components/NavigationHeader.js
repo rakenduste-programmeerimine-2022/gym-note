@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { Tabs, Tab, AppBar, Box } from "@mui/material";
+import { Route, BrowserRouter, Switch, Link, NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import NewGymNote from "../pages/NewGymNote";
 import ProfilePage from "../pages/Profile";
+import Test from "../pages/Test";
 
 const StyledTab = styled(Tab)({
     color: "black",
@@ -16,23 +16,19 @@ const StyledTab = styled(Tab)({
     }
 })
 export default function NavigationHeader() {
-    const [value, setValue] = React.useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
+    const routes = ["/Profile", "/Test"];
     return (
-        <>
-            <Box sx={{ width: '100%'}}>
-                <Tabs value={value} onChange={handleChange} indicatorColor="">
-                    <StyledTab label="New GymNote"/>
-                    <StyledTab label="My GymNotes" />
-                    <StyledTab label="Explore" />
-                    <StyledTab label="Guides" />
-                    <StyledTab label="My Profile"/>
-                </Tabs>
-            </Box>
-        </>
+      <BrowserRouter>
+      <AppBar>
+        <Tabs>
+          <StyledTab label={<Link to={routes[0]}>Profile</Link>} />
+          <StyledTab label={<Link to={routes[1]}>Test</Link>} />
+        </Tabs>
+        <Switch>
+          <Route exact path={routes[0]} component={ProfilePage} />
+          <Route exact path={routes[1]} component={Test} />
+        </Switch>
+      </AppBar>
+    </BrowserRouter>
     );
-}
+  }
