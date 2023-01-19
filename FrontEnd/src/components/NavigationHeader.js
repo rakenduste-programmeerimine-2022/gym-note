@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { Tabs, Tab, AppBar, Box } from "@mui/material";
+import { Tabs, Tab, AppBar} from "@mui/material";
 import { Route, BrowserRouter, Switch, Link, NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import NewGymNote from "../pages/NewGymNote";
 import ProfilePage from "../pages/Profile";
-import Test from "../pages/Test";
 
 const StyledTab = styled(Tab)({
     color: "black",
@@ -16,17 +15,17 @@ const StyledTab = styled(Tab)({
     }
 })
 export default function NavigationHeader() {
-    const routes = ["/Profile", "/Test"];
+    const routes = ["/Profile","/NewGymNote"];
     return (
       <BrowserRouter>
       <AppBar>
         <Tabs>
           <StyledTab label={<Link to={routes[0]}>Profile</Link>} />
-          <StyledTab label={<Link to={routes[1]}>Test</Link>} />
+          <StyledTab label={<Link to={routes[1]}>New Gym Note</Link>} />
         </Tabs>
         <Switch>
           <Route exact path={routes[0]} component={ProfilePage} />
-          <Route exact path={routes[1]} component={Test} />
+          <Route exact path={routes[1]} component={NewGymNote} />
         </Switch>
       </AppBar>
     </BrowserRouter>
