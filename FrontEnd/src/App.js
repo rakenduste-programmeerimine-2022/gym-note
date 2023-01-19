@@ -4,6 +4,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import * as React from "react";
 import NavigationHeader from "./components/NavigationHeader";
+import NewGymNote from "./pages/NewGymNote";
+import ProfilePage from "./pages/Profile";
+import Explore from "./pages/Explore";
 
 const Theme = createTheme({
   background: {
