@@ -82,7 +82,7 @@ export default function ProfilePage(){
     return(
         <>
             <Container fixed>
-                <Box sx={{bgcolor: '#9b9b9b', height: '120vh'}}>
+                <Box sx={{bgcolor: '#9b9b9b', height: '120vh'}} style={{ marginTop: "5vh" }}>
                     <Box textAlign={"left"} lineHeight={3} paddingLeft={3} color={"black"} fontSize={30}>
                         USER PROFILE:</Box>
                     <Grid container spacing={0.5} paddingX={8} paddingTop={5}>
