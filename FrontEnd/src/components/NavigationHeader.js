@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Tabs, Tab, AppBar} from "@mui/material";
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+
 import { styled } from "@mui/material/styles";
 import NewGymNote from "../pages/NewGymNote";
 import ProfilePage from "../pages/Profile";
 import Explore from "../pages/Explore";
 import Guides from "../pages/Guides";
-
 
 const StyledTab = styled(Tab)({
     color: "black",
@@ -39,4 +39,4 @@ export default function NavigationHeader() {
       </AppBar>
     </BrowserRouter>
     );
-  }
+}
