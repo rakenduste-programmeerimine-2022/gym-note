@@ -32,13 +32,13 @@ function App() {
       <>
   <ThemeProvider theme={Theme}>
     <CssBaseline/>
-    <header>
-    <NavigationHeader/>
-    </header>
-    <main>
-        <div className="App">
-        </div>
-    </main>
+    <main></main>
+    <NavigationHeader></NavigationHeader>
+    <div className="App">
+      <header className="App-header">
+        <Explore/>
+      </header>
+    </div>
   </ThemeProvider>
     </>
   );
