@@ -7,9 +7,9 @@ require('dotenv').config()
 
 const bodyParser = require('body-parser');
 const GymNoteRoutes = require('./routes/GymNote.routes')
-const RegisterUserRoutes = require('./routes/RegisterUser.routes')
+const RegisterUserRoutes = require('./routes/UserFunctions.routes')
 app.use('/gymnotes', GymNoteRoutes)
-app.use('/register', RegisterUserRoutes)
+app.use('/userFuncs/', RegisterUserRoutes)
 
 app.use(bodyParser.json());
 app.use(morgan('dev'))

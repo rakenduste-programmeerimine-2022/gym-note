@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const RegisterUserController = require('../controllers/RegisterUser.Controller')
+const RegisterUserController = require('../controllers/UserFunctions.Controller')
 const bodyParser = require('body-parser');
 
 const getMiddleware = (req, res, next) => {
@@ -9,6 +9,7 @@ const getMiddleware = (req, res, next) => {
 }
 
 router.use(bodyParser.json());
-router.post('/', RegisterUserController.create)
+router.post('/register/', RegisterUserController.create)
+router.post('/login/', RegisterUserController.login)
 
 module.exports = router
