@@ -1,10 +1,12 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { Tabs, Tab, AppBar} from "@mui/material";
+import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
+
 import { styled } from "@mui/material/styles";
 import NewGymNote from "../pages/NewGymNote";
 import ProfilePage from "../pages/Profile";
+import Explore from "../pages/Explore";
+import Guides from "../pages/Guides";
 
 const StyledTab = styled(Tab)({
     color: "black",
@@ -16,23 +18,25 @@ const StyledTab = styled(Tab)({
     }
 })
 export default function NavigationHeader() {
-    const [value, setValue] = React.useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
+    const routes = ["/Profile","/NewGymNote","/Explore", "/Guides"];
     return (
-        <>
-            <Box sx={{ width: '100%'}}>
-                <Tabs value={value} onChange={handleChange} indicatorColor="">
-                    <StyledTab label="New GymNote"/>
-                    <StyledTab label="My GymNotes" />
-                    <StyledTab label="Explore" />
-                    <StyledTab label="Guides" />
-                    <StyledTab label="My Profile"/>
-                </Tabs>
-            </Box>
-        </>
+      <BrowserRouter>
+      <AppBar>
+        <Tabs sx={{bgcolor: '#9b9b9b'}}>
+          <StyledTab label={<NavLink to={routes[0]}>Profile</NavLink>} />
+          <StyledTab label={<NavLink to={routes[1]}>New Gym Note</NavLink>} />
+          <StyledTab label={<NavLink to={routes[2]}>Explore</NavLink>} />
+          <StyledTab label={<NavLink to={routes[3]}>Guides</NavLink>} />
+
+        </Tabs>
+        <Switch>
+          <Route exact path={routes[0]} component={ProfilePage} />
+          <Route exact path={routes[1]} component={NewGymNote} />
+          <Route exact path={routes[2]} component={Explore} />
+          <Route exact path={routes[3]} component={Guides} />
+          <Route exact path="/" component={ProfilePage} />
+        </Switch>
+      </AppBar>
+    </BrowserRouter>
     );
 }
