@@ -7,6 +7,7 @@ import NavigationHeader from "./components/NavigationHeader";
 import NewGymNote from "./pages/NewGymNote";
 import ProfilePage from "./pages/Profile";
 import Explore from "./pages/Explore";
+import LogOnPage from "./pages/LogOn";
 
 const Theme = createTheme({
   background: {
@@ -36,7 +37,7 @@ function App() {
     <NavigationHeader></NavigationHeader>
     <div className="App">
       <header className="App-header">
-        <Explore/>
+        <LogOnPage/>
       </header>
     </div>
   </ThemeProvider>
