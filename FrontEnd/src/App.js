@@ -33,11 +33,11 @@ function App() {
       <>
   <ThemeProvider theme={Theme}>
     <CssBaseline/>
+    
     <main></main>
-    <NavigationHeader></NavigationHeader>
     <div className="App">
       <header className="App-header">
-        <LogOnPage/>
+      <NavigationHeader />
       </header>
     </div>
   </ThemeProvider>
